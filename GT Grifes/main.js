@@ -89,6 +89,16 @@ function atualizarVisibilidadeLinks() {
     }
 }
 
+function imprimir() {
+    document.getElementById('nm').style = "display: none;"; // esconde algum elemento para não aparecer no print
+    document.getElementById('naoMostrar').style = "display: none;";
+    document.getElementById('carrinho').style = "width: 100%";
+    document.getElementById('carrinho').style = "height: 100%";
+    document.getElementById('carrinho').style = "padding: 300px";
+    window.print();
+    window.location.reload();
+  }
+
 // Chamar a função quando a página for totalmente carregada
 window.onload = function() {
     atualizarVisibilidadeLinks();
