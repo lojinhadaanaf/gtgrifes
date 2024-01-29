@@ -1,0 +1,289 @@
+body {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    /* Alterado para centralizar */
+    background-color: #e6e6e6;
+    color: black;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Adicionado para centralizar */
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+#carrinho-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#carrinho-icon img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+#imgCarrinho{
+    position: relative;
+    left: -5px;
+}
+
+#carrinho-icon:hover {
+    padding: 5px 15px;
+    background-color: #fff;
+}
+
+#carrinho {
+    position: fixed;
+    top: 10px; /* Ajuste conforme necessário */
+    right: 10px; /* Ajuste conforme necessário */
+    display: grid;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    max-height: 400px; /* Altura máxima para o carrinho - ajuste conforme necessário */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+    padding: 10px; /* Adicione algum preenchimento para o conteúdo dentro do carrinho */
+}
+
+#total-carrinho{
+    color: black;
+}
+
+.tt{
+    position: relative;
+    color: black;
+}
+
+#carrinho li img {
+    pointer-events: none;
+    width: 200px;
+    height: 190px;
+}
+
+#lista-carrinho {
+    display: grid;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+}
+
+#carrinho h2 {
+    margin-top: 0;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+
+#logoutli:hover{
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+nav ul li a:hover {
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+#logoutLi {
+    display: inline-block;
+    margin-left: auto;
+}
+
+#logoutLi a {
+    padding: 10px;
+    color: black;
+}
+
+#logoutLi a:hover {
+    background-color: #fff;
+}
+
+
+p {
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 31px;
+    margin-top: 25px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    width: 1864px auto;
+    padding: 20px;
+    flex-direction: column;
+    display: grid;
+}
+
+footer ul{
+    display: flex;
+    text-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+#ctt{
+    position: relative;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    right: 15ch;
+
+}
+
+#dadosctt{
+    position: relative;
+    top: 30px;
+    right: 36ch;
+
+}
+
+.copy{
+    position: relative;
+    right: 180px;
+    font-size: 20px;
+}
+
+img {
+    width: 210px;
+    height: 220px;
+}
+
+
+.produtos {
+    text-align: center;
+}
+
+.produtos ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.produtos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* Garante que a imagem não ultrapasse os limites do contêiner */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave de 0.3 segundos */
+}
+
+.produtos li:hover {
+    transform: scale(1.1);
+    /* Aumenta a escala para 1.1 quando o mouse passa por cima */
+}
+
+.produtos li img {
+    width: 100%;
+    /* Garante que a imagem preencha totalmente o contêiner */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+form {
+    display: none;
+    text-align: center;
+    width: 400px;
+    background-color: black;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0.2);
+    padding: 20px;
+    margin: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    background-color: rgb(27, 27, 27);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+
+button {
+    background-color: rgb(27, 27, 27);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+#carrossel{
+    height: 390px;
+    width: 800px;
+
+}

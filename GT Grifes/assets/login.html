@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT GRIFES</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>GT GRIFES</h1>
+    </header>
+
+    <main>
+        <h2>LOGIN</h2>
+        <center>
+            <br>
+            <p>Insira Seu E-mail e Senha para <br> Realizar seu Login ou Cadastra-se.</p>
+            <div id="loginForm">
+                <form name="formLogin" onsubmit="return realizarLogin()">
+                    <label for="emailLogin"></label>
+                    <input type="email" name="emailLogin" placeholder="Informe seu email">
+                    <br>
+                    <label for="senhaLogin"></label>
+                    <input type="password" name="senhaLogin" placeholder="Informe sua senha">
+                    <br>
+                    <input type="submit" value="Login">
+                    <br>
+                    <input type="button" id="btnCadastrar" value="Cadastra-se" onclick="showCadastroForm()"></input>
+                    <br>
+                    <a href="index.html">Voltar</a>
+                </form>
+            </div>
+
+            <div id="cadastroForm" style="display: none;">
+                <form name="formCd" onsubmit="return validarFormularioCd()">
+                    <h3>Cadastrar</h3>
+                    <label for="nome"></label>
+                    <input type="text" name="nomeCd" placeholder="Nome:">
+                    <br>
+                    <label for="email"></label>
+                    <input type="email" name="emailCd" placeholder="Email:">
+                    <br>
+                    <label for="telefone"></label>
+                    <input type="text" name="telefoneCd" placeholder="Telefone:">
+                    <br>
+                    <label for="senha"></label>
+                    <input type="password" name="senhaCd" placeholder="Senha:">
+                    <br>
+                    <input type="submit" value="Cadastrar">
+                    <br>
+                    <a href="login.html">Voltar</a>
+                </form>
+                <br><br><br>
+            </div>
+        </center>
+    </main>
+    <br><br>
+    <footer class="copy">&copy; GT Grifes. Todos os direitos reservados.</footer>
+    <script src="login.js"></script>
+    <script src="cadastro.js"></script>
+</body>
+
+</html>

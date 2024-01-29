@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT GRIFES</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=AXTUsh_VKLZ6hXjQ500lcaKAOKIQ7CKFM-yohSFecpPlVNIj4Z-S8O3nSG2U3O7dDoB33rxN5YpMJtVb"></script>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>GT GRIFES</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="https://acesse.one/2hI9S">INSTAGRAM</a></li>
+            <li><a href="https://contate.me/gtgrifes">WHATSAPP</a></li>
+            <li><a href="../assets/sobre.html">SOBRE NÓS</a></li>
+               <li id="logoutLi" onclick="logout()">LOGOUT</li>
+            <li id="entrarLi"><a href="../assets/login.html">ENTRAR</a></li>
+            <li id="carrinho-icon" onclick="toggleCarrinho()">
+                <img src="../img/carrinho.png" alt="Carrinho" id="imgCarrinho">
+                <span id="carrinho-tab">CARRINHO</span>
+            </li>
+
+        </ul>
+    </nav>
+    <div id="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <ul id="lista-carrinho"></ul>
+        <p class="tt">Total: R$ <span id="total-carrinho">0</span></p>
+        <button onclick="imprimirCarrinho()">IMPRIMIR PDF</button>
+        <br>
+        <div id="paypal-button-container"></div>
+    </div>
+
+    <br>
+    <main>
+        <h2>Malhas Disponiveis</h2>
+
+        <div class="produtos">
+            <ul>
+                <li>
+                    <span>Camisa Arsenal Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/arsenal.jpeg" alt="Arsenal">
+                    <br>
+                    <button onclick="adicionarProduto('Arsenal', 170.00, '01',  'img/arsenal.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Atletico-MG Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/ateltico.jpeg" alt="Atletico-MG">
+                    <br>
+                    <button onclick="adicionarProduto('Atletico-MG', 170.00, '02',  '../img/ateltico.jpeg')">Adicionar
+                        ao Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Barcelona Treino Temporada 2023..</span>
+                    <span>R$ 150.00</span>
+                    <img src="../img/barcelona trainig.jpeg" alt="Barcelona Treino">
+                    <br>
+                    <button
+                        onclick="adicionarProduto('Barcelona trainig', 150.00, '03',  '../img/barcelona trainig.jpeg')">Adicionar
+                        ao Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Barcelona Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/barcelona.jpeg" alt="Barcelona">
+                    <br>
+                    <button onclick="adicionarProduto('Barcelona', 170.00, '04',  '../img/barcelona.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Bayern Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/bayern.jpeg" alt="Bayern">
+                    <br>
+                    <button onclick="adicionarProduto('Bayern', 170.00, '05',  '../img/bayern.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa City Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/city.jpg" alt="Manchster City">
+                    <br>
+                    <button onclick="adicionarProduto('Manchster City', 170.00, '06',  '../img/city.jpg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Flamengo Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/flamengo.jpeg" alt="Flamengo">
+                    <br>
+                    <button onclick="adicionarProduto('Flamengo', 170.00, '07',  '../img/flamengo.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Roma Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/roma.jpeg" alt="Roma">
+                    <br>
+                    <button onclick="adicionarProduto('Roma', 170.00, '08',  '../img/roma.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Real Madrid Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/real madrid.jpeg" alt="Real Madrid">
+                    <br>
+                    <button
+                        onclick="adicionarProduto('Real Madrid', 170.00, '09',  '../img/real madrid.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Inter Milan Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/inter milan.jpeg" alt="Inter Milan">
+                    <br>
+                    <button
+                        onclick="adicionarProduto('Inter Milan', 170.00, '10',  '../img/inter milan.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Regata Lakers Roxa #6 Lebron James 2023-24.</span>
+                    <span>R$ 230.00</span>
+                    <img src="../img/lakers.jpg" alt="Lakers">
+                    <br>
+                    <button onclick="adicionarProduto('Lakers', 170.00, '11',  '../img/lakers.jpg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Portugal CR7.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/portugal.jpeg" alt="Portugal">
+                    <br>
+                    <button onclick="adicionarProduto('Portugal', 170.00, '12',  '../img/portugal.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Internacional Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/internacional.jpeg" alt="Internacional">
+                    <br>
+                    <button
+                        onclick="adicionarProduto('Internacional', 170.00, '13',  '../img/internacional.jpeg')">Adicionar
+                        ao Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Tottenham Temporada 2023.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/tottenham.jpeg" alt="Tottenham">
+                    <br>
+                    <button onclick="adicionarProduto('Tottenham', 170.00, '14',  '../img/tottenham.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Corta Vento Real Madrid 23/24.</span>
+                    <span>R$ 230.00</span>
+                    <img src="../img/corta.jpeg" alt="Corta Vento">
+                    <br>
+                    <button onclick="adicionarProduto('Corta Vento', 170.00, '15',  '../img/corta.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+
+                <li>
+                    <span>Camisa Brasil Temporada 2024.</span>
+                    <span>R$ 170.00</span>
+                    <img src="../img/brasil.jpeg" alt="Brasil">
+                    <br>
+                    <button onclick="adicionarProduto('Brasil', 170.00, '16',  '../img/brasil.jpeg')">Adicionar ao
+                        Carrinho</button>
+                </li>
+            </ul>
+        </div>
+        <br><br>
+    </main>
+
+    <footer>
+        <ul>
+            <li id="ctt">Contato</li>
+            <li id="dadosctt">Email: gtgrifes7@gmail.com <br>
+                Telefone: 31 99709-4668.</li>
+            <li class="copy">&copy; GT Grifes. Todos os Direitos Reservados 2024.</li>
+        </ul>
+    </footer>
+</body>
+
+</html>
