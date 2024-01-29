@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div id="naoMostrar">
     <header>
         <h1>GT GRIFES</h1>
     </header>
@@ -23,6 +24,7 @@
             <li><a href="../assets/sobre.html">SOBRE NÓS</a></li>
                <li id="logoutLi" onclick="logout()">LOGOUT</li>
             <li id="entrarLi"><a href="../assets/login.html">ENTRAR</a></li>
+            <li><a onclick="imprimir()">IMPRIMIR PDF</a></li>
             <li id="carrinho-icon" onclick="toggleCarrinho()">
                 <img src="../img/carrinho.png" alt="Carrinho" id="imgCarrinho">
                 <span id="carrinho-tab">CARRINHO</span>
@@ -30,15 +32,18 @@
 
         </ul>
     </nav>
+        </div>
+    
     <div id="carrinho">
         <h2>Carrinho de Compras</h2>
         <ul id="lista-carrinho"></ul>
         <p class="tt">Total: R$ <span id="total-carrinho">0</span></p>
         <button onclick="imprimirCarrinho()">IMPRIMIR PDF</button>
-        <br>
         <div id="paypal-button-container"></div>
     </div>
-
+    
+    <div id="nm">
+        
     <br>
     <main>
         <h2>Malhas Disponiveis</h2>
@@ -196,6 +201,10 @@
         </div>
         <br><br>
     </main>
+    
+      <script>
+        document.getElementById('carrinho').style = "display: none";
+    </script>
 
     <footer>
         <ul>
@@ -205,6 +214,7 @@
             <li class="copy">&copy; GT Grifes. Todos os Direitos Reservados 2024.</li>
         </ul>
     </footer>
+        </div>
 </body>
 
 </html>
